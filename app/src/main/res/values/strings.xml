@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Duelists</string>
+    <string name="action_settings">Settings</string>
+    <string name="buttonName">Новая дуэль</string>
+    <string name="buttonBangName">Ход</string>
+    <string name="textViewHero">Вы</string>
+    <string name="textViewRival">Противник</string>
+    <string name="imageViewHero">viewHero</string>
+    <string name="imageViewRival">viewRival</string>
+    <string name="labelTextViewKick">Установите точку удара</string>
+    <string name="labelTextViewBlock">Установите точку блокировки</string>
+
+</resources>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/LinearLayoutHero"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/textViewHero"
+                android:id="@+id/textViewHero"/>
+
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="200dp"
+                android:layout_height="5dp"
+                android:id="@+id/progressBarHero"
+                android:max="100"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/SubLinearLayoutHero">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewHero"
+                    android:contentDescription="@string/imageViewHero"
+                    android:src="@drawable/hero"
+                    android:visibility="invisible"
+                    android:baselineAlignBottom="false"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/radioGroupBlock">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioBlockHead"
+                        android:layout_weight="1"
+                        android:onClick="onRadioBlockClicked"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioBlockBody"
+                        android:layout_weight="1"
+                        android:onClick="onRadioBlockClicked"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioBlockLegs"
+                        android:layout_weight="1"
+                        android:onClick="onRadioBlockClicked"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/labelTextViewBlock"
+                android:id="@+id/textViewBlock"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:id="@+id/LinearLayoutRival">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/textViewRival"
+                android:id="@+id/textViewRival"
+                />
+
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="200dp"
+                android:layout_height="5dp"
+                android:id="@+id/progressBarRival"
+                android:max="100"
+                android:visibility="visible"
+                android:mirrorForRtl="true"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/SubLinearLayoutRival">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioKickHead"
+                        android:layout_weight="1"
+                        android:onClick="onRadioKickClicked"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioKickBody"
+                        android:layout_weight="1"
+                        android:onClick="onRadioKickClicked"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioKickLegs"
+                        android:layout_weight="1"
+                        android:onClick="onRadioKickClicked"/>
+                </RadioGroup>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewRival"
+                    android:contentDescription="@string/imageViewRival"
+                    android:src="@drawable/rival"
+                    android:visibility="invisible"
+                    android:layout_weight="1"
+                    android:layout_gravity="right"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/labelTextViewKick"
+                android:id="@+id/textViewKick"
+                android:layout_gravity="left"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:id="@+id/LinearLayoutButtoms">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonName"
+                android:id="@+id/button"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonBangName"
+                android:id="@+id/buttonBang"
+                android:enabled="false"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>
