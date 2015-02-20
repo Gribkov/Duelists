@@ -11,5 +11,9 @@
     <string name="imageViewRival">viewRival</string>
     <string name="labelTextViewKick">Установите точку удара</string>
     <string name="labelTextViewBlock">Установите точку блокировки</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="labelInBattle">В бой!</string>
 
 </resources>
