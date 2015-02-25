@@ -41,28 +41,24 @@ public class DuelActivity extends ActionBarActivity {
         mTextViewHeroKick = (TextView) findViewById(R.id.textViewKick);
         mProgressHero = (ProgressBar) findViewById(R.id.progressBarHero);
         mProgressRival = (ProgressBar) findViewById(R.id.progressBarRival);
+        mButtonBang = (Button)findViewById(R.id.buttonBang);
 
         mImageViewHero = (ImageView) findViewById(R.id.imageViewHero);
         mImageViewRival = (ImageView) findViewById(R.id.imageViewRival);
 
-        mButton = (Button)findViewById(R.id.button);
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHero = new Duelist(100,5,1);
-                mHero.setNameDuelst("Вы");
-                mProgressHero.setProgress(mHero.getHealth());
-                mImageViewHero.setVisibility(View.VISIBLE);
-                mRival = new Duelist(100,5,1);
-                mRival.setNameDuelst("Противник");
-                mProgressRival.setProgress(mRival.getHealth());
-                mImageViewRival.setVisibility(View.VISIBLE);
-                mButtonBang.setEnabled(true);
-                mStepHero = 2;
-            }
-        });
+        mHero = new Duelist(50,5,1);
+        mHero.setNameDuelst("Вы");
+        mProgressHero.setProgress(mHero.getHealth());
+        mImageViewHero.setVisibility(View.VISIBLE);
+        mRival = new Duelist(50,5,1);
+        mRival.setNameDuelst("Противник");
+        mProgressRival.setProgress(mRival.getHealth());
+        mImageViewRival.setVisibility(View.VISIBLE);
+        mButtonBang.setEnabled(true);
+        mStepHero = 2;
+
         //Схождение дуэлянтов
-        mButtonBang = (Button)findViewById(R.id.buttonBang);
+
         mButtonBang.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -70,8 +66,14 @@ public class DuelActivity extends ActionBarActivity {
                 mProgressHero.setProgress(mHero.getHealth());
                 mRival.getKick(mHeroKick,mRandom.nextInt(2)+1, mHero.getStrength());
                 mProgressRival.setProgress(mRival.getHealth());
-                if(mHero.isDuelistLive() != true) mButtonBang.setEnabled(false);
-                if(mRival.isDuelistLive() != true) mButtonBang.setEnabled(false);
+                if(mHero.isDuelistLive() != true) {
+                    mButtonBang.setEnabled(false);
+                    mImageViewHero.setImageResource(R.drawable.hero_lose);
+                }
+                if(mRival.isDuelistLive() != true) {
+                    mButtonBang.setEnabled(false);
+                    mImageViewRival.setImageResource(R.drawable.rival_lose);
+                }
             }
         });
 

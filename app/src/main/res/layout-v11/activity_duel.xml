@@ -175,13 +175,6 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonName"
-                android:id="@+id/button"
-                android:layout_weight="1"/>
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:text="@string/buttonBangName"
                 android:id="@+id/buttonBang"
                 android:enabled="false"
