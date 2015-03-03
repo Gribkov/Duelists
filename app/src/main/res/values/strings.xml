@@ -13,7 +13,6 @@
     <string name="labelTextViewBlock">Установите точку блокировки</string>
     <string name="title_activity_main">MainActivity</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="labelInBattle">В бой!</string>
+    <string name="labelInBattle">К барьеру!</string>
 
 </resources>

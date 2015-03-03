@@ -43,7 +43,7 @@
                     android:id="@+id/imageViewHero"
                     android:contentDescription="@string/imageViewHero"
                     android:src="@drawable/hero"
-                    android:visibility="invisible"
+                    android:visibility="visible"
                     android:baselineAlignBottom="false"/>
 
                 <RadioGroup
@@ -149,7 +149,7 @@
                     android:id="@+id/imageViewRival"
                     android:contentDescription="@string/imageViewRival"
                     android:src="@drawable/rival"
-                    android:visibility="invisible"
+                    android:visibility="visible"
                     android:layout_weight="1"
                     android:layout_gravity="right"/>
 

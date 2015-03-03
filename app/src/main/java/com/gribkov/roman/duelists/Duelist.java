@@ -5,9 +5,9 @@ package com.gribkov.roman.duelists;
  */
 public class Duelist {
 
-    public final int HEAD = 1; //Голова
-    public final int BODY = 2; //Корпус
-    public final int LEGS = 3; //Ноги
+    public final int HEAD = 0; //Голова
+    public final int BODY = 1; //Корпус
+    public final int LEGS = 2; //Ноги
     //Получение удара
     public void getKick (Integer mPartBodyKick,Integer mPartBodyBlock, Integer mStrength){
         Integer mDamage = 0;

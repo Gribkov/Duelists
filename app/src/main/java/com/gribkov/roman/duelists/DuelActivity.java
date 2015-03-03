@@ -48,12 +48,12 @@ public class DuelActivity extends ActionBarActivity {
 
         mHero = new Duelist(50,5,1);
         mHero.setNameDuelst("Вы");
+        mProgressHero.setMax(mHero.getHealth());
         mProgressHero.setProgress(mHero.getHealth());
-        mImageViewHero.setVisibility(View.VISIBLE);
         mRival = new Duelist(50,5,1);
         mRival.setNameDuelst("Противник");
+        mProgressRival.setMax(mRival.getHealth());
         mProgressRival.setProgress(mRival.getHealth());
-        mImageViewRival.setVisibility(View.VISIBLE);
         mButtonBang.setEnabled(true);
         mStepHero = 2;
 
@@ -62,9 +62,18 @@ public class DuelActivity extends ActionBarActivity {
         mButtonBang.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                mHero.getKick(mRandom.nextInt(2)+1,mHeroBlock, mRival.getStrength());
+                Integer RK = 0, RS=0;
+                RK = mRandom.nextInt(3)+1;
+                RS = mRandom.nextInt(3)+1;
+                //Log.i("RK=", RK.toString());
+                //Log.i("RS=", RS.toString());
+                mHero.getKick(RK,mHeroBlock, mRival.getStrength());
+                if(RK==mHeroBlock) mImageViewHero.setImageResource(R.drawable.hero_hrsh);
+                else mImageViewHero.setImageResource(R.drawable.hero_bam);
                 mProgressHero.setProgress(mHero.getHealth());
-                mRival.getKick(mHeroKick,mRandom.nextInt(2)+1, mHero.getStrength());
+                mRival.getKick(mHeroKick,RS, mHero.getStrength());
+                if(RS==mHeroKick) mImageViewRival.setImageResource(R.drawable.rival_hrsh);
+                else mImageViewRival.setImageResource(R.drawable.rival_bam);
                 mProgressRival.setProgress(mRival.getHealth());
                 if(mHero.isDuelistLive() != true) {
                     mButtonBang.setEnabled(false);
