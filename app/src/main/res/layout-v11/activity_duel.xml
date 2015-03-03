@@ -57,7 +57,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/radioBlockHead"
                         android:layout_weight="1"
-                        android:onClick="onRadioBlockClicked"/>
+                        android:onClick="onRadioBlockClicked"
+                        android:checked="true"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -126,7 +127,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/radioKickHead"
                         android:layout_weight="1"
-                        android:onClick="onRadioKickClicked"/>
+                        android:onClick="onRadioKickClicked"
+                        android:checked="true"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
